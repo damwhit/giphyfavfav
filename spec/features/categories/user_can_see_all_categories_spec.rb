@@ -8,7 +8,7 @@ RSpec.feature "User can view all categories" do
     end
 
     visit categories_path
-    save_and_open_page
+
     categories.each do |category|
       expect(page).to have_link category.name, href: category_path(category)
     end

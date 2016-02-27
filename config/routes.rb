@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   #   resources :categories
   #   resources :gifs
   # end
-  
-  resources :categories, only: [:index, :new, :create, :show]
+
+  resources :categories
 
   resources :gifs, only: [:index, :new]
   #
