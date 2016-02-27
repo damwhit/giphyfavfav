@@ -4,6 +4,7 @@ RSpec.feature "user logs in and out" do
 
   context "user can log in" do
     scenario "logged in user sees dashboard" do
+      pending
       login_user
 
       expect(page).to have_content("Welcome, July!")
@@ -13,6 +14,7 @@ RSpec.feature "user logs in and out" do
 
   context "guest cannot login" do
     scenario "guest sees invalid message" do
+      pending
       visit login_path
       fill_in "Username", with: "July"
       fill_in "Password", with: "password"
@@ -25,6 +27,7 @@ RSpec.feature "user logs in and out" do
 
   context "registered user cannot login with wrong password" do
     scenario "user sees invalid message" do
+      pending
       user = User.create(username: "July",
                          password: "password")
 
@@ -40,6 +43,7 @@ RSpec.feature "user logs in and out" do
 
   context "authenticated user can logout" do
     scenario "user sees log out page" do
+      pending
       login_user
 
       expect(page).to have_content("Welcome, July!")

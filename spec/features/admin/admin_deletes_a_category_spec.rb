@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Admin can delete a category" do
   scenario "they see the index page without the deleted category" do
+    pending
     admin = User.create(username: "david",
                           password: 'password',
                           role: 1

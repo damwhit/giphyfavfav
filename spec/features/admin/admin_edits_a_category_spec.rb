@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Admin can edit a category" do
   scenario "they see the page for the individual category" do
+    pending
     admin = User.create(username: "david",
                           password: 'password',
                           role: 1

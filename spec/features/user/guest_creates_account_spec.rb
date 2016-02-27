@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "guest creates account" do
   scenario "user sees welcome message" do
+    pending
     visit new_user_path
     fill_in "Username", with: "July"
     fill_in "Password", with: "password"
