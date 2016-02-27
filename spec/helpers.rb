@@ -10,4 +10,5 @@ module Helpers
     fill_in "Password", with: "password"
     click_button "Login"
   end
+
 end
