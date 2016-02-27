@@ -8,7 +8,7 @@ RSpec.feature "User can edit a category" do
 
     click_on "lols"
 
-    click_on "Edit Category"
+    click_on "Edit"
     expect(current_path).to eq(edit_category_path(category))
 
     fill_in "Name", with: "food"
