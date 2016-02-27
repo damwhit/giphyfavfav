@@ -5,6 +5,7 @@ class GifsController < ApplicationController
   end
 
   def new
+    @category = Category.new
     @gif = Gif.new
   end
 
