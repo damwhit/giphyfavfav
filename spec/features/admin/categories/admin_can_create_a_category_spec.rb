@@ -1,9 +1,11 @@
 require 'rails_helper'
 
-RSpec.feature "User creates a new category" do
+RSpec.feature "Admin creates a new category" do
   scenario "they see the page for the individual category" do
+    create_and_stub_admin
 
-    visit categories_path
+    visit admin_categories_path
+
 
     click_on "New Category"
 
