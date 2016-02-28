@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :gifs
   #
-  # resources :users, only: [:new, :index, :create, :show]
+  resources :users, only: [:new, :index, :create, :show]
   #
   # get '/login', to: 'sessions#new'
   # post '/login', to: 'sessions#create'
