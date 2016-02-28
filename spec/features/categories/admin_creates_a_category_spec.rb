@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Admin creates a new Category" do
   scenario "they see the page for the individual category" do
-    admin = User.create(username: "david",
-                          password: 'password',
-                          role: 1
-                          )
-    ApplicationController.any_instance.stub(:current_user) {admin}
+    create_and_stub_admin
 
     visit admin_categories_path
 

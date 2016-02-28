@@ -2,13 +2,14 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories
-    resources :gifs
+    resources :gifs, only: [:new, :index, :create, :show, :destroy]
   end
 
-  resources :categories
-  resources :gifs
+  resources :categories, only: [:index, :show]
 
-  resources :users, only: [:new, :index, :create, :show]
+  resources :gifs, only: [:new, :index, :create, :show, :destroy]
+
+  resources :users, only: [:new, :create, :show]
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

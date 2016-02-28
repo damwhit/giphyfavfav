@@ -11,5 +11,12 @@ module Helpers
     click_button "Login"
   end
 
-  
+  def create_and_stub_admin
+    admin = User.create(username: "david",
+                          password: 'password',
+                          role: 1
+                          )
+    ApplicationController.any_instance.stub(:current_user) {admin}
+  end
+
 end
