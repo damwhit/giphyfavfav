@@ -1,9 +1,11 @@
 <%= link_to "New Gif", new_admin_gif_path %>
 <% @categories.each do |category| %>
 <div id="category-<%= category.id %>">
-  <%= category.name %>
+  <ul>
+    <li><%= link_to category.name, category_path(category) %></li>
   <% category.gifs.each do |gif| %>
     <%= image_tag gif.image_path %>
   <% end %>
+</ul>
 </div>
 <% end %>
