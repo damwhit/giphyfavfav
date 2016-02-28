@@ -12,7 +12,7 @@ RSpec.feature "User can view all gifs" do
     end
 
     visit gifs_path
-    save_and_open_page
+
     categories.each do |category|
       within("#category-#{category.id}") do
         expect(page).to have_content category.name

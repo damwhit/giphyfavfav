@@ -27,4 +27,10 @@ class GifsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    @gif = Gif.find(params[:id])
+    @gif.destroy
+    redirect_to gifs_path
+  end
 end
