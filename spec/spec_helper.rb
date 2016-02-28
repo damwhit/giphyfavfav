@@ -74,5 +74,4 @@ RSpec.configure do |config|
 =end
 
   config.include Helpers
-  
 end
