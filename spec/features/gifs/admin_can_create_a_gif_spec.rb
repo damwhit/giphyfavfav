@@ -1,11 +1,12 @@
 require 'rails_helper'
 require 'apicall'
 
-RSpec.feature "User creates a new gif" do
+RSpec.feature "Admin creates a new gif" do
   scenario "they see the page for the individual gif" do
     APICall.stub(:image_path) { "http://media2.giphy.com/media/jixtchplI4vYY/giphy.gif" }
+    create_and_stub_admin
 
-    visit gifs_path
+    visit admin_gifs_path
 
     click_on "New Gif"
 

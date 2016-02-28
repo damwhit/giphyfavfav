@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "user can delete categories" do
-  scenario "user does not see the deleted category" do
+RSpec.feature "Admin can delete categories" do
+  scenario "they do not see the deleted category" do
     create_and_stub_admin
 
     categories = %w(funny silly crazy).map do |category_name|

@@ -1,17 +1,17 @@
 require 'rails_helper'
 require 'apicall'
 
-RSpec.feature "User can view all gifs" do
+RSpec.feature "Admin can view all gifs" do
   scenario "they can see all gifs sorted by category" do
     APICall.stub(:image_path) { "https://media.giphy.com/media/7e0EvlBD7nxZu/giphy.gif" }
-
+    create_and_stub_admin
     categories = %w(funny silly crazy).map do |category|
       cat = Category.where(name: category).first_or_create
       cat.gifs.create(image_path: "https://media.giphy.com/media/7e0EvlBD7nxZu/giphy.gif")
       cat
     end
 
-    visit gifs_path
+    visit admin_gifs_path
 
     categories.each do |category|
       within("#category-#{category.id}") do

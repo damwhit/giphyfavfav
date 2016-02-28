@@ -7,10 +7,10 @@ RSpec.feature "Admin creates a new Category" do
     visit admin_categories_path
 
     expect(page).to have_content "All Categories"
-    # click_on "New category"
-    # fill_in "category_name", with: "lols"
-    # click_on "Create Category"
-    #
-    # expect(page).to have_content "lols"
+    click_on "New Category"
+    fill_in "category_name", with: "lols"
+    click_on "Create Category"
+
+    expect(page).to have_content "lols"
   end
 end
