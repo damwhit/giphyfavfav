@@ -3,7 +3,7 @@ require 'apicall'
 class GifsController < ApplicationController
 
   def index
-
+    @categories = Category.all
   end
 
   def show
