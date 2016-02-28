@@ -1,8 +1,5 @@
-<%= form_for(@category) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <!-- type in category name -->
-  <!-- send api call with category name -->
-  <!-- create gif by entering url from api into image_path -->
-  <%= f.submit "Create Gif" %>
+<%= form_tag(gifs_path) do %>
+  <%= label_tag :search_term %>
+  <%= text_field_tag :search_term%>
+  <%= submit_tag "Create Gif" %>
 <% end %>

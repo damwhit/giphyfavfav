@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   # end
 
   resources :categories
-
-  resources :gifs, only: [:index, :new]
+  resources :gifs
   #
   # resources :users, only: [:new, :index, :create, :show]
   #
