@@ -10,7 +10,6 @@ RSpec.feature "user can view all gifs" do
     gif = cat.gifs.create(image_path: "https://media.giphy.com/media/7e0EvlBD7nxZu/giphy.gif")
 
     visit gif_path(gif)
-    save_and_open_page
 
     expect(page).to have_content "lolololololol"
     expect(page).to have_css("img[src='https://media.giphy.com/media/7e0EvlBD7nxZu/giphy.gif']")

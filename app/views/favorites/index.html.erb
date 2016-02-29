@@ -1,0 +1,4 @@
+<% @favorites.each do |fav| %>
+<%= fav.category.name %>
+<%= image_tag fav.image_path %>
+<% end %>

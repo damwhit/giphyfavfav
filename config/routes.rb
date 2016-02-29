@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   resources :gifs, only: [:new, :index, :create, :show, :destroy]
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    resources :favorites, only: [:index, :show, :new, :create]
+  end
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

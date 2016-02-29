@@ -1,2 +1,3 @@
 <%= @category.name %>
 <%= image_tag @gif.image_path %>
+<%= link_to "favfav dis gif", user_favorites_path(current_user, gif_id: @gif.id), method: :post %>
